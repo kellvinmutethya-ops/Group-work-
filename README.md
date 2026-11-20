@@ -1,108 +1,287 @@
-BIT 2118: Scientific Computing — Group & Individual Work Repository
-Welcome to the official repository for BIT 2118 Scientific Computing. This repository contains Python-based implementations, modified real-world case studies, parameter variation analyses, and detailed documentation covering 20 core scientific computing tasks.
+BIT 2118: SCIENTIFIC COMPUTING
+
+Individual Group Project – Python-Based Scientific Computing Solutions
+
+Student Name: Kelvin Mutethya
+Registration Number: BSCCS252609557
+Course Code: BIT 2118
+Course Title: Scientific Computing
+Institution: Mount Kenya University
+
 ---
-Course & Project Overview
-Course Code & Title: BIT 2118 – Scientific Computing
-Timeline: Group work to be completed by Week 10; Individual Group Project tasks conducted during Weeks 11–13.
-Submission Policy: While discussions and conceptual planning are conducted collaboratively in groups, each student must maintain and submit their own individual GitHub repository. Group repositories are strictly prohibited. All links and documentation must be uploaded via VLMS.
----
-Repository Structure
-```text
+
+1. Project Overview
+
+This repository contains my individual implementation of the BIT 2118 Scientific Computing project. The project focuses on applying Python programming and numerical methods to solve mathematical and scientific computing problems.
+
+I developed and organized this repository to demonstrate my understanding of the major concepts covered in Scientific Computing, including numerical computation, matrix operations, linear algebra, root-finding techniques, interpolation, numerical integration, differential equations, optimization and Monte Carlo simulations.
+
+In addition to implementing the mathematical methods, I explored how these techniques can be applied to practical situations in fields such as networking, engineering, computer graphics, finance, energy management and data analysis.
+
+The project covers Tasks 2–20 and includes original Python implementations, parameter variation experiments, modified real-world applications, generated outputs and supporting documentation.
+
+2. Project Objectives
+
+The main objectives of this project were:
+
+1. To develop practical programming skills using Python and scientific computing libraries.
+2. To implement mathematical and numerical methods in solving computational problems.
+3. To understand the mathematical principles and formulas behind each implemented method.
+4. To investigate how changes in input parameters affect computational results.
+5. To apply scientific computing techniques to different real-world scenarios.
+6. To interpret numerical results using written explanations, calculations and graphical representations.
+7. To develop an organized individual GitHub repository for documenting and presenting my work.
+
+3. Repository Structure
+
+I organized the project into separate directories to make the source code, experiments, modified applications and documentation easy to access.
+
 BIT2118_Scientific_Computing/
 │
-├── README.md                      # Comprehensive project documentation (this file)
-├── requirements.txt               # Python dependencies (NumPy, SciPy, Matplotlib)
+├── README.md
+├── requirements.txt
 │
-├── code/                          # Base Python solution scripts for Tasks 2–20
+├── code/
 │   ├── Task_02_numpy_arrays.py
 │   ├── Task_03_vectorization.py
-│   └── ...
+│   ├── Task_04_floating_point_errors.py
+│   ├── Task_05_matrix_operations.py
+│   ├── ...
+│   └── Task_20_monte_carlo.py
 │
-├── changed_parameter/             # Scripts demonstrating parameter variation (Instruction C)
+├── changed_parameter/
 │   ├── Task_02_numpy_arrays_changed.py
-│   └── ...
+│   ├── ...
 │
-├── modified_case/                 # Scripts applying methods to new real-world cases (Instruction E)
+├── modified_case/
 │   ├── Task_02_water_tank_modified.py
-│   └── ...
+│   ├── ...
 │
-├── outputs/                       # Generated text logs, console outputs, and saved plots (.png)
-│   └── ...
+├── outputs/
+│   └── Generated results, logs and graphical plots
 │
-└── docs/                          # Detailed markdown documentation files per task
-    └── ...
-```
----
-General Instructions Checklist
-Every task implemented in this repository adheres strictly to the assessment guidelines:
-Task Execution (Instruction A): All mandatory tasks (Tasks 2–20) are fully implemented.
-Mathematical Identification (Instruction B): Input values, governing formulas, and numerical operations are explicitly documented.
-Parameter Variation (Instruction C): At least one key input or parameter is systematically altered to analyze output sensitivity.
-Interpretation (Instruction D): Outputs are explained in plain text, accompanied by graphical visualizations where applicable.
-Real-World Modification (Instruction E): Programs are extended to solve distinct, practical real-world problems with documented assumptions and results.
-Individual Submission (Instruction F): Maintained solely within this individual student repository.
----
-Summary of Tasks & Mathematical Concepts
-Task	Mathematical Concept & Python Module	Example Application / Real-World Problem
-2	NumPy Arrays & Numerical Computation (`numpy`)	Sensor readings from IoT devices; batch temperature conversion.
-3	Mathematical Functions & Vectorization (`numpy`, `timeit`)	Speed-up comparisons for large-scale network latency arrays.
-4	Floating-Point Arithmetic & Errors (`numpy`)	Absolute/relative error quantification and catastrophic cancellation.
-5	Matrix Algebra & Operations (`numpy`)	2D affine transformations (rotation and scaling) in computer graphics.
-6	Systems of Linear Equations (`numpy.linalg`)	Resource allocation and solving $Ax = b$ for active server loads.
-7	Gaussian Elimination & LU Decomposition (`scipy.linalg`)	Efficient repeated linear solves with single factorization $PA = LU$.
-8	Iterative Methods (Jacobi & Gauss-Seidel)	Steady-state heat distribution across sparse grid networks.
-9	Eigenvalues & Eigenvectors (`numpy.linalg`)	Network centrality metrics and PageRank-style analysis.
-10	Root Finding: Bisection & Fixed-Point (`scipy.optimize`)	Thermal equilibrium temperature matching in non-linear systems.
-11	Root Finding: Newton-Raphson & Secant (`scipy.optimize`)	Financial Internal Rate of Return (IRR) and Net Present Value (NPV).
-12	Nonlinear Systems (`scipy.optimize.root`)	Intersection points between geometric curves (circle and parabola).
-13	Interpolation (`scipy.interpolate`)	Cubic spline and linear interpolation for missing sensor data points.
+└── docs/
+    └── Individual task explanations and documentation
 
-14	Curve Fitting & Least Squares (`scipy.optimize.curve_fit`)	Empirical server response-time modeling under increasing user loads.
-15	Numerical Differentiation (`numpy`)	Instantaneous velocity and acceleration estimation from GPS data.
-16	Numerical Integration (`scipy.integrate`)	Smart-meter energy consumption via Trapezoidal and Simpson’s rules.
-17	ODEs: Euler Method (`numpy`, `matplotlib`)	Newton's law of cooling for transient thermal simulation.
-18	ODEs: SciPy Solvers (`scipy.integrate.solve_ivp`)	RC electrical circuit charging dynamics using adaptive step-size ODE solvers.
-19	Numerical Optimization (`scipy.optimize.minimize`)	Cost minimization for cloud server resource allocation with constraints.
-20	Monte Carlo Methods (`numpy.random`)	Probabilistic risk analysis and server overload simulation under uncertainty.
----
-Getting Started & Installation
-Prerequisites
-Make sure you have Python 3.8 or higher installed on your system along with pip.
-Installation Steps
-Clone your individual repository:
-```bash
-   git clone <your-individual-github-repo-link>
-   cd BIT2118_Scientific_Computing
-   ```
-Install the required Python packages:
-```bash
-   pip install -r requirements.txt
-   ```
-Running a Task Script
-To execute any base task, navigate to the code directory or run from root:
-```bash
+Description of the Directories
+
+- code/ – Contains the main Python programs used to implement the scientific computing tasks.
+- changed_parameter/ – Contains modified versions of selected programs where input parameters are varied to examine their effects on the results.
+- modified_case/ – Contains extended applications of the numerical methods to different practical and real-world problems.
+- outputs/ – Stores generated results, program outputs and graphical representations.
+- docs/ – Contains detailed explanations of the mathematical concepts, formulas, implementation procedures and interpretations of the results.
+- requirements.txt – Specifies the Python libraries required to execute the programs.
+
+4. Implementation of Scientific Computing Tasks
+
+The project covers the following mathematical and computational concepts:
+
+Task| Concept| Implementation and Application
+2| NumPy Arrays and Numerical Computation| Used NumPy arrays to process sensor readings and perform temperature conversions.
+3| Mathematical Functions and Vectorization| Compared traditional loops with vectorized operations when processing network latency data.
+4| Floating-Point Arithmetic and Errors| Examined absolute errors, relative errors and catastrophic cancellation in numerical calculations.
+5| Matrix Algebra and Operations| Applied matrix operations to rotation and scaling transformations in computer graphics.
+6| Systems of Linear Equations| Used linear algebra to solve resource allocation problems involving server loads.
+7| Gaussian Elimination and LU Decomposition| Implemented matrix factorization techniques for solving systems of linear equations.
+8| Iterative Methods| Applied Jacobi and Gauss-Seidel methods to estimate steady-state heat distribution.
+9| Eigenvalues and Eigenvectors| Explored eigenvalue computations and their application in network analysis.
+10| Bisection and Fixed-Point Methods| Applied root-finding techniques to determine thermal equilibrium conditions.
+11| Newton-Raphson and Secant Methods| Used numerical root-finding methods in financial NPV and IRR calculations.
+12| Nonlinear Systems| Solved nonlinear equations representing intersections between geometric curves.
+13| Interpolation| Applied linear interpolation and cubic splines to estimate missing sensor readings.
+14| Curve Fitting and Least Squares| Developed mathematical models for predicting server response times under increasing workloads.
+15| Numerical Differentiation| Estimated velocity and acceleration from GPS-based position data.
+16| Numerical Integration| Applied trapezoidal and Simpson's rules to estimate electrical energy consumption.
+17| Ordinary Differential Equations (Euler Method)| Simulated temperature changes using Newton's law of cooling.
+18| SciPy ODE Solvers| Modelled the charging behaviour of an RC electrical circuit.
+19| Numerical Optimization| Investigated cost minimization in cloud server resource allocation.
+20| Monte Carlo Methods| Used random simulations to analyse uncertainty and server overload risks.
+
+5. Mathematical Methods and Formulas
+
+Throughout the project, I identified the mathematical principles governing each computational task before implementing the corresponding Python solution.
+
+Some of the major mathematical expressions used include:
+
+a) Systems of Linear Equations
+
+[
+Ax=b
+]
+
+Used to determine unknown variables in systems of simultaneous linear equations.
+
+b) Eigenvalue Problems
+
+[
+A\mathbf{v}=\lambda\mathbf{v}
+]
+
+Used to determine the eigenvalues and eigenvectors of a matrix.
+
+c) Numerical Integration
+
+[
+I=\int_a^b f(x),dx
+]
+
+Used to approximate the area under a curve and estimate quantities such as energy consumption.
+
+d) Least Squares Method
+
+[
+\min\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
+]
+
+Used to determine the best-fitting mathematical model for a given dataset.
+
+e) Absolute Error
+
+[
+E_a=|x_{\text{true}}-x_{\text{approx}}|
+]
+
+Used to measure the difference between the actual and approximate numerical values.
+
+f) Relative Error
+
+[
+E_r=\frac{|x_{\text{true}}-x_{\text{approx}}|}
+{|x_{\text{true}}|}
+]
+
+Used to measure numerical error relative to the true value.
+
+These mathematical expressions provided the foundation for implementing and interpreting the numerical methods in Python.
+
+6. Parameter Variation and Sensitivity Analysis
+
+To investigate how input values influence computational results, I created a separate directory called "changed_parameter/".
+
+In this section, I modified selected input parameters while keeping the underlying mathematical methods unchanged.
+
+The experiments helped me examine:
+
+- How changes in array sizes affect numerical computations.
+- How different input values influence calculated outputs.
+- How numerical accuracy changes with different computational parameters.
+- How iterative methods respond to different initial values and stopping tolerances.
+- How changes in simulation parameters affect the final results.
+
+The purpose of these experiments was to understand the relationship between input parameters and computational outcomes rather than relying on a single set of values.
+
+7. Modified Real-World Applications
+
+To extend the practical application of the concepts, I created another directory called "modified_case/".
+
+This section applies the original mathematical methods to different real-world situations.
+
+Some of the applications explored include:
+
+1. Water Tank Analysis: Applying numerical computation to water-level and volume-related calculations.
+2. Network Performance: Using vectorization and numerical analysis to examine network latency.
+3. Computer Graphics: Applying matrix transformations to represent rotation and scaling.
+4. Electrical Engineering: Using differential equations to simulate RC circuit charging behaviour.
+5. Energy Management: Estimating electrical energy consumption using numerical integration.
+6. Cloud Computing: Applying optimization methods to resource allocation and operational cost reduction.
+7. Risk Analysis: Using Monte Carlo simulations to investigate uncertainty in server performance.
+
+Each modified application demonstrates how mathematical and computational techniques can be adapted to solve problems beyond their original examples.
+
+8. Results, Visualization and Interpretation
+
+I used numerical outputs and graphical representations to examine and interpret the results obtained from the Python programs.
+
+Where applicable, Matplotlib was used to generate graphs illustrating:
+
+- Numerical convergence in iterative methods.
+- Relationships between variables.
+- Curve-fitting results.
+- Temperature changes over time.
+- Electrical circuit behaviour.
+- Simulation outcomes and probability distributions.
+
+The generated outputs are stored in the "outputs/" directory.
+
+The accompanying documentation in "docs/" explains the results and their mathematical significance.
+
+9. Python Libraries and Technologies
+
+The project uses the following Python libraries and technologies:
+
+Library/Technology| Purpose
+Python 3.8+| Main programming language.
+NumPy| Numerical calculations, arrays, matrices and random number generation.
+SciPy| Advanced numerical methods, optimization, interpolation and integration.
+Matplotlib| Graph generation and visualization of computational results.
+Timeit| Measuring and comparing program execution times.
+Git and GitHub| Version control and project hosting.
+
+10. Installation and Execution
+
+The project can be executed on a computer with Python installed.
+
+Requirements
+
+- Python 3.8 or later.
+- pip package manager.
+- Git (for cloning the repository).
+
+Installing Dependencies
+
+The required Python libraries are listed in "requirements.txt".
+
+They can be installed using:
+
+pip install -r requirements.txt
+
+Running a Main Task
+
+For example, to execute Task 2:
+
 python code/Task_02_numpy_arrays.py
-```
-To run a modified real-world case study:
-```bash
+
+Running a Modified Application
+
+To execute the modified water tank application:
+
 python modified_case/Task_02_water_tank_modified.py
-```
+
+The commands above assume the files are available under the stated names and directory structure.
+
+11. Learning Outcomes
+
+Through this project, I have developed a better understanding of how mathematical concepts can be translated into computational solutions using Python.
+
+The project has strengthened my ability to:
+
+- Work with numerical data using NumPy.
+- Perform matrix and linear algebra operations.
+- Implement and compare numerical methods.
+- Solve linear and nonlinear mathematical problems.
+- Analyse numerical errors and computational accuracy.
+- Use SciPy for advanced scientific calculations.
+- Generate and interpret scientific graphs.
+- Apply mathematical models to practical problems.
+- Organize and document programming projects using GitHub.
+
+12. Conclusion
+
+This project demonstrates my practical understanding of Scientific Computing through the implementation of different numerical methods and their applications using Python.
+
+By working through Tasks 2–20, I explored how mathematical models, numerical algorithms and programming techniques can be combined to solve scientific and real-world problems.
+
+The inclusion of parameter variation experiments and modified case studies further demonstrates the importance of analysing computational results under different conditions.
+
+Overall, this repository represents my individual academic work, practical programming experience and continued development of scientific computing skills.
+
 ---
-Python Libraries Used
-NumPy (`np`): Fast vectorized array operations, linear algebra solvers, matrix products (`@`), and random number generation (`default_rng`).
-SciPy (`scipy`): Advanced scientific computing submodules including `scipy.linalg`, `scipy.optimize`, `scipy.interpolate`, and `scipy.integrate`.
-Matplotlib (`plt`): High-quality plot generation for visualizing convergence curves, fitted models, ODE trajectories, and simulation results.
-Timeit (`timeit`): High-precision timing utilities for measuring the performance benefits of vectorization over explicit Python loops.
----
-Key Mathematical Notation Reference
-Throughout the documentation and individual task write-ups, scientific notation and mathematical equations are formulated using standard conventions:
-Linear systems: $Ax = b$
-Eigenvalue problems: $A \mathbf{v} = \lambda \mathbf{v}$
-Numerical integration: $\int_{a}^{b} f(x) , dx$
-Least squares objective: $\min \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
----
-Author & Repository Maintenance
-Student Name: Kelvin Mutethya 
-Registration Number: [BSCCS252609557]
-Course: BIT 2118 Scientific Computing
-Institution: [Mount Kenya University]
+
+Author
+
+Kelvin Mutethya
+Registration Number: BSCCS252609557
+Course: BIT 2118 – Scientific Computing
+Institution: Mount Kenya University
+
+Individual Project Repository – 2026
